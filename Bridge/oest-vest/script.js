@@ -46,7 +46,7 @@ window.onload = function() {
             aendring = aendringer[i]
             sum += aendring
         }
-        sumElm.innerHTML = sum
+        sumElm.innerHTML = 'Øst-Vest ' + sum
 
         const spil = []
         for (let i = 0; i < 24; i++) {
