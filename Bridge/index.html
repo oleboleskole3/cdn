@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #left {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+        }
+        #right {
+            position: absolute;
+            top: 0%;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="left" src="nord-syd" frameborder="0"></iframe>
+    <iframe id="right" src="oest-vest" frameborder="0"></iframe>
+    <script>
+        let frames = document.getElementsByTagName('iframe')
+        setInterval(function() {
+            Array.from(frames).forEach(function(frame) {
+                frame.width = window.innerWidth/2
+                frame.height = window.innerHeight
+            })
+        }, 1500)
+    </script>
+</body>
+</html>

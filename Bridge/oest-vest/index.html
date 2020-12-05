@@ -1,0 +1,102 @@
+<head>
+    <meta charset="UTF-8">
+	<title>Bridge udregning</title>
+	<script src="script.js"></script>
+	<style type="text/css" media="screen">
+		* {
+			font-size: medium;
+		}
+		
+		h1 {
+			font-size: 2.5rem !important;
+			margin-bottom: 5rem;
+		}
+		
+		table {
+			border-collapse: collapse;
+			border: 2px solid #2c2c2c;
+		}
+		
+		table td {
+			border: 1px solid #9e9e9e;
+			height: 24px;
+		}
+		
+		table {
+			display: inline-table;
+		}
+		
+		#top td {
+			width: 16vw;
+		}
+		
+		#historik td {
+			width: 16vw;
+		}
+		
+		td input {
+			width: 8vw;
+		}
+		
+		td button {
+			width: 12vw;
+		}
+		
+		.edit {
+			height: 20px;
+		}
+		
+		.input {
+			width: 16vw;
+		}
+		
+		.disabled {
+			border: 1px solid #696969;
+			border-radius: 2px;
+			color: #000000;
+			background-color: #dddddd;
+		}
+		
+		.ny {
+			position: relative;
+			width: 50%;
+			left: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<form id="set">
+		<table id="top">
+			<tr>
+				<th>Runde nr.</th>
+				<th>Små kort</th>
+				<th>Kontrakt</th>
+				<th>Ændring</th>
+				<th colspan="2">Knapper</th>
+			</tr>
+			<tr>
+				<td><input type="number" id="rundenr" class="input disabled" disabled></td>
+				<td><input type="number" id="fordel" class="input"></td>
+				<td><input type="number" id="kontakt" class="input"></td>
+				<td><input id="net" value="0" class="input disabled" disabled></td>
+				<td><input type="submit" value="Gem" class="input"></td>
+				<td><input type="button" value="Ny" class="input ny" onclick="document.cookie = 'spilS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';location.reload()"></td>
+			</tr>
+		</table>
+	</form>
+
+	<h1 style="text-align: center;" id="sum">Øst-Vest 0</h1>
+
+	<table id="historik">
+		<tr>
+			<th>Runde nr.</th>
+			<th>Små kort</th>
+			<th>Kontrakt</th>
+			<th>Ændring</th>
+			<th>Sum</th>
+			<th></th>
+		</tr>
+	</table>
+
+</body>
